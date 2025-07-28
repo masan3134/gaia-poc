@@ -1,5 +1,5 @@
-'use client';
-import GaiaListener from '../components/GaiaListener';
+'use client'
+import GaiaListener from '../../components/GaiaListener'
 
 export default function Home() {
   return (
@@ -7,5 +7,5 @@ export default function Home() {
       <h1>GAIA Panel</h1>
       <GaiaListener />
     </main>
-  );
+  )
 }
