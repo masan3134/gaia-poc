@@ -1,0 +1,18 @@
+image:
+  file: .gitpod.Dockerfile
+
+tasks:
+  - init: chmod +x scripts/*.sh
+  - init: ./scripts/01-setup-env.sh
+  - command: ./scripts/02-start-dev.sh
+
+ports:
+  - port: 3000
+    onOpen: open-preview
+  - port: 5173
+    onOpen: open-preview
+
+vscode:
+  extensions:
+    - esbenp.prettier-vscode
+    - ms-vscode.vscode-typescript-tslint-plugin
