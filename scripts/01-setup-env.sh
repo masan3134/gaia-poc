@@ -9,9 +9,9 @@ echo ">>> pnpm kuruluyor..."
 npm install -g pnpm
 
 echo ">>> Proje bağımlılıkları yükleniyor..."
-cd ext
+if [ -d ext ]; then cd ext; pnpm install; cd ..; fi
 pnpm install
-cd app
+if [ -d app ]; then cd app; pnpm install; cd ..; fi
 pnpm install
 
 echo ">>> Ortam hazır!"
