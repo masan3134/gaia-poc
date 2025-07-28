@@ -3,9 +3,21 @@
   "name": "GAIA DOM Sensor",
   "version": "1.0",
   "permissions": ["activeTab"],
-  "host_permissions": ["https://chat.openai.com/*"],
-  "content_scripts": [{
-    "matches": ["https://chat.openai.com/*"],
-    "js": ["domReader.js"]
-  }]
+  "host_permissions": [
+    "https://chat.openai.com/*",
+    "http://localhost:3001/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://chat.openai.com/*"],
+      "js": ["domReader.js"]
+    },
+    {
+      "matches": ["http://localhost:3001/*"],
+      "js": ["panelListener.js"]
+    }
+  ]
 }
