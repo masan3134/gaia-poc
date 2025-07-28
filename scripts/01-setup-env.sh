@@ -9,9 +9,9 @@ echo ">>> pnpm kuruluyor..."
 npm install -g pnpm
 
 echo ">>> Proje bağımlılıkları yükleniyor..."
-cd /workspace/gaia-poc/ext
+cd ext
 pnpm install
-cd /workspace/gaia-poc/app
+cd app
 pnpm install
 
 echo ">>> Ortam hazır!"
