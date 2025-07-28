@@ -1,0 +1,11 @@
+{
+  "manifest_version": 3,
+  "name": "GAIA DOM Sensor",
+  "version": "1.0",
+  "permissions": ["activeTab"],
+  "host_permissions": ["https://chat.openai.com/*"],
+  "content_scripts": [{
+    "matches": ["https://chat.openai.com/*"],
+    "js": ["domReader.js"]
+  }]
+}
