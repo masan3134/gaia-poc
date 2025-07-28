@@ -1,3 +1,4 @@
+import GaiaListener from '../components/GaiaListener';
 import Image from "next/image";
 
 export default function Home() {
